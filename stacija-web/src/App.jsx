@@ -33,6 +33,7 @@ import CursedEyes from "./Pages/Projekte/3D/Fashion/Outfits/CursedEyes";
 import PinkHeart from "./Pages/Projekte/3D/Fashion/Outfits/PinkHeart";
 import DrawingRouter from "./Pages/Projekte/2D/Drawings/DrawingRouter";
 import Skills from "./Pages/Skills/Skills";
+import White from "./Pages/Projekte/3D/Fashion/Outfits/White";
 
 function App() {
   return (
@@ -70,6 +71,8 @@ function App() {
         <Route path="/projekte/3d/fashion/outfits/pink-hearts" element={<PinkHeart/>} />
         <Route path="/projekte/3d/fashion/outfits/cursed-eyes" element={<CursedEyes/>} />
         <Route path="/projekte/3d/fashion/outfits/cafè-latte" element={<CafeLate/>} />
+        <Route path="/projekte/3d/fashion/outfits/white-collection" element={<White/>} />
+
 
 
         <Route path="/projekte/3d/fashion/lookbooks" element={<Lookbooks />} />

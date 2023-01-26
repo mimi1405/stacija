@@ -7,7 +7,7 @@ import Footer from "../../../../../components/Footer";
 export default function Outfits() {
   return (
     <>
-      <section id="entry">
+      <section id="entry-outfits">
         <h1 className="projects-title threed">Outfits</h1>
         <div className="routes routes-outfits">
           <Link to="/projekte/3d/fashion/outfits/pink-hearts">
@@ -23,6 +23,13 @@ export default function Outfits() {
           <Link to="/projekte/3d/fashion/outfits/cafè-latte">
             <p className="route-text-outfit threed-coffe">
               Cafè Latte
+            </p>
+          </Link>
+        </div>
+        <div className="routes routes-outfits">
+        <Link to="/projekte/3d/fashion/outfits/white-collection">
+            <p className="route-text-outfit">
+              White-Collection
             </p>
           </Link>
         </div>

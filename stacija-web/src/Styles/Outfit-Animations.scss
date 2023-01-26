@@ -134,3 +134,13 @@ $primarycolour: #623e24;
   }
 }
 
+#entry-outfits{
+  width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+
