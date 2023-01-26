@@ -1,0 +1,136 @@
+@keyframes cursed-change {
+  0% { color: red; }
+  20% { color: darkred; }
+  40% { color: red; }
+  60% { color: darkred; }
+  80% { color: #ac1717; }
+  100% { color:  #ff0000}
+}
+
+$blood: #ff0000;
+
+
+.blood {
+  animation: cursed-change 2s infinite;
+  color: red;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Kanit:900');
+
+$LIGHTING_FLOOR: 1;
+$LIGHTING_CEIL: 2;
+$LIGHTING_FLAT: 3;
+
+@mixin text3d($primary,
+  $depth: 5,
+  $shadowsteps: 5,
+  $shadowincrementer: 3px,
+  $shadowopacity: .5,
+  $primaryshadowcolour: #000,
+  $lighting: $LIGHTING_CEIL) {
+  $predefinedShadows: (0 0 5px rgba($primaryshadowcolour, .05),
+    0 -1px 3px rgba($primaryshadowcolour, .2),
+    0 3px 5px rgba($primaryshadowcolour, .2));
+  $value: ();
+
+  @for $i from 1 through $depth {
+    $num: $i + px;
+    $hueadjust: $i;
+
+    @if($lighting ==$LIGHTING_FLOOR) {
+      $hueadjust: ($i * 2 - $depth - 5) * 1%;
+    }
+
+    @else if($lighting ==$LIGHTING_CEIL) {
+      $hueadjust: -($i*2 + $depth - 10) * 1%;
+    }
+
+    @else if($lighting ==$LIGHTING_FLAT) {
+      $hueadjust: -$depth * 1%;
+    }
+
+    $colour: adjust-color($primary, $lightness: $hueadjust);
+    $theShadow: 0 $num 0 $colour;
+    $value: append($value, $theShadow, comma);
+  }
+
+  @for $i from 1 through $shadowsteps {
+    @if($i >=length($predefinedShadows)) {
+      $dist: $i * $shadowincrementer;
+      $value: append($value, 0 $dist $dist rgba($primaryshadowcolour, $shadowopacity));
+    }
+
+    @else {
+      $value: append($value, nth($predefinedShadows, $i));
+    }
+  }
+
+  text-shadow: $value;
+}
+
+
+$secondarycolour: #ac6c3e;
+$primarycolour: #623e24;
+
+
+.threed-coffe {
+  color: $primarycolour;
+  @include text3d(adjust-color($primarycolour, $lightness: -8%),
+    $depth: 8,
+    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+}
+
+.threed-coffe:hover {
+  @include text3d(adjust-color($primarycolour, $lightness: -8%),
+    $depth: 8,
+    $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+    color: $secondarycolour;
+}
+
+.threed-blood {
+  color: $blood;
+  @include text3d(adjust-color($blood, $lightness: -8%),
+    $depth: 8,
+    $primaryshadowcolour: adjust-color($blood, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+}
+
+.threed-blood:hover {
+  @include text3d(adjust-color($blood, $lightness: -8%),
+    $depth: 8,
+    $primaryshadowcolour: adjust-color($blood, $lightness: -10%, $saturation: +20%),
+    $shadowopacity: .3);
+    color: $secondarycolour;
+}
+
+.route-text-outfit {
+  font-size: 7rem;
+  padding-right: 80px;
+  padding-left: 80px;
+}
+
+@keyframes color-change {
+  0% { color: plum; }
+  20% { color: var(--light-red); }
+  40% { color: pink; }
+  60% { color: palevioletred; }
+  80% { color: rgb(247, 79, 185); }
+  100% { color: var(--red); }
+}
+
+.pink-changing {
+  animation: color-change 2s infinite;
+}
+
+@media screen and (max-width: 992px) {
+  .route-text-outfit {
+    font-size: 3rem;
+    padding-right: 80px;
+    padding-left: 80px;
+  }
+}
+

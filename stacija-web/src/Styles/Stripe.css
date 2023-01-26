@@ -1,0 +1,63 @@
+#scroll-container{
+  overflow: hidden;
+  overflow-x: hidden;
+  font-size: 8rem;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+#scroll-text {
+  /* animation properties */
+  -moz-transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  transform: translateX(100%);
+  font-family: Monoton;
+  -moz-animation: my-animation 13s linear infinite;
+  -webkit-animation: my-animation 13s linear infinite;
+  animation: my-animation 13s linear infinite;
+}
+
+.name{
+  color: var(--red);
+}
+
+#scroll-text {
+    margin-right: 150px;
+}
+
+/* for Firefox */
+@-moz-keyframes my-animation {
+  from { -moz-transform: translateX(100%); }
+  to { -moz-transform: translateX(-100%); }
+}
+
+/* for Chrome */
+@-webkit-keyframes my-animation {
+  from { -webkit-transform: translateX(100%); }
+  to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+  from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #scroll-container{
+    overflow: hidden;
+    overflow-x: hidden;
+    font-size: 4.6rem;
+    display: flex;
+    flex-direction: row;
+    width: auto;
+  }
+}

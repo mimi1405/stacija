@@ -1,0 +1,26 @@
+#footer{
+    height: 150px;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: x-large;
+}
+
+#footer p{
+    font-size: x-large;
+    font-weight: 900;
+}
+
+@media screen and (max-width: 992px) {
+    #footer{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    #footer p{
+        font-size: 1rem;
+        font-weight: bolder;
+        }
+}

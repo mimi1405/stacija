@@ -1,0 +1,31 @@
+.render-introduction {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.render-introduction div {
+  border-bottom: white solid 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.render3dtitle {
+  font-family: Monoton;
+  font-size: 7rem;
+  border-bottom: white solid 1px;
+  padding: 25px;
+}
+
+.render-description {
+  text-align: center;
+  padding: 50px;
+}
+
+#info{
+  color: var(--light-red);
+  cursor: pointer;
+}

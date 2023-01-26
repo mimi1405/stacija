@@ -1,0 +1,471 @@
+#entry-cubes {
+  width: 100vw;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#animation-container {
+  display: flex;
+  width: auto;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+
+#animation-container-lights {
+  display: flex;
+  width: auto;
+  height: 100vh;
+}
+#animation-container-lights div {
+  text-align: center;
+}
+#animation-container-lights expl-container{
+  width: 80%;
+  justify-self: center;
+}
+
+.routes-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  justify-content: center;
+  align-items: center;
+}
+.animation-routes-top {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+}
+.animation-routes-bottom {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 100px;
+}
+
+.animation-routes-text {
+  font-size: 3rem;
+}
+
+.cubes {
+  font-family: Cube;
+  height: auto;
+}
+
+.light {
+  font-family: Monoton;
+  font-size: 3.5rem;
+  position: relative;
+  border: none;
+  transition: 0.4s ease-in;
+  z-index: 1;
+}
+
+.light::before,
+.light::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+}
+
+.light:hover {
+  color: blue;
+  text-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 200px blue;
+}
+
+.lighttitle {
+  font-family: Monoton;
+  border: none;
+  z-index: 1;
+  color: blue;
+  text-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 200px blue;
+}
+
+.lighttitle::before,
+.lighttitle::after {
+  position: absolute;
+  content: "";
+  z-index: 1;
+}
+
+.melt {
+  animation: melt 5s infinite;
+  color: rgb(142, 142, 142);
+  font-size: 3.5rem;
+}
+
+.melt:hover {
+  animation: none;
+  color: rgb(175, 175, 175);
+  font-size: 4rem;
+  transition: ease-in 500ms;
+}
+
+@keyframes melt {
+  0% {
+    transform: translateY(0);
+    filter: blur(5px);
+    transform: skewX(-1deg);
+  }
+  100% {
+    transform: translateY(-10px);
+    transform: skewX(2deg);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+
+.slimy {
+  animation: slimy 2s ease-in-out infinite;
+  font-size: 48px;
+  text-align: center;
+  margin: 50px auto;
+  position: relative;
+  text-shadow: 0 0 5px rgb(255, 255, 255);
+  font-family: Monoton;
+}
+
+@keyframes slimy {
+  0% {
+    transform: skew(0deg);
+  }
+  20% {
+    transform: skew(5deg);
+  }
+  40% {
+    transform: skew(-5deg);
+  }
+  60% {
+    transform: skew(5deg);
+  }
+  80% {
+    transform: skew(-5deg);
+  }
+  100% {
+    transform: skew(0deg);
+  }
+}
+
+
+.explode {
+  transition: transform 0.5s;
+  font-size: 3rem;
+  font-family: Monoton;
+  margin-right: 0px;
+  transition-property: margin;
+  transition-duration: 0.5s;
+}
+
+.explode:hover {
+  transform: scale(1.5);
+  position: relative;
+  margin-right: 50px;
+}
+
+@keyframes push{
+  0%{
+    margin-right: 80px;
+  }
+}
+
+@keyframes explode {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cube {
+  font-family: Cube;
+  position: relative;
+  font-size: 1.5rem;
+  line-height: normal;
+}
+
+@keyframes cube {
+  0% {
+    transform: rotateX(0deg) rotateY(0deg);
+  }
+  25% {
+    transform: rotateX(90deg) rotateY(90deg);
+  }
+  50% {
+    transform: rotateX(180deg) rotateY(180deg);
+  }
+  75% {
+    transform: rotateX(270deg) rotateY(270deg);
+  }
+  100% {
+    transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+.animation-melting-title {
+  font-size: 7rem;
+}
+.stacija {
+  font-family: Monoton;
+  color: var(--light-red);
+}
+
+#melting-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  align-items: center;
+}
+
+#melting-container div {
+  display: flex;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  justify-items: center;
+  width: 80%;
+  gap: 50px;
+}
+
+#melting-container div p {
+  width: 50%;
+  text-align: center;
+  padding: 10px;
+  display: block;
+  font-size: larger;
+  font-weight: 600;
+}
+
+.green {
+  color: rgb(55, 178, 55);
+}
+.silver {
+  color: #a1a1a1;
+}
+
+.cubestitle {
+  padding: 50px;
+  color: plum;
+  opacity: 1;
+  z-index: 10;
+  font-size: 4rem;
+}
+
+@keyframes color-change {
+  0% { color: plum; }
+  20% { color: var(--light-red); }
+  40% { color: pink; }
+  60% { color: palevioletred; }
+  80% { color: rgb(247, 79, 185); }
+  100% { color: var(--red); }
+}
+
+.pink-changing {
+  animation: color-change 2s infinite;
+}
+
+@keyframes light-changer {
+  0% {color: blue;}
+  30% {color: #304088;}
+  50% {color: royalblue;}
+  80% {color: #1e0e6c;}
+  100% {color: cornflowerblue;}
+}
+
+.light-spam{
+  color: blue;
+  text-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 200px blue;
+  animation: light-changer 4s infinite;
+}
+.light-spam:hover{
+  color: blue;
+  text-shadow: 0 0 5px blue, 0 0 25px blue, 0 0 50px blue, 0 0 200px blue;
+  animation: none;
+}
+
+
+
+.cubes-container {
+  width: 80%;
+  justify-self: center;
+}
+.cubes-container-description {
+  justify-self: center;
+  border-bottom: white solid 1px;
+  width: 80%;
+  padding: 25px;
+  line-height: normal;
+}
+
+.cubes-container-description p {
+  font-size: 2rem;
+}
+
+.fire {
+  margin: 50px auto;
+  width: 80%;
+  max-width: 1000px;
+  height: 200px;
+
+  background-position: center center;
+  background-size: 1000px 200px;
+  border-radius: 10px;
+  font-family: 'Akronim';
+  overflow: hidden;
+    text-align: center;
+  vertical-align: middle;
+
+}
+.fire:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.Blazing {
+  display: inline-block;
+  margin: 0;
+
+    color: rgb(255, 115, 0);
+    font-size: 100px;
+  line-height: 50px;
+  min-width: 50px;
+  outline: none;
+  vertical-align: middle;
+    
+  text-shadow:
+        0 3px 20px red,
+        0 0 20px red,
+    0 0 10px orange,
+    4px -5px 6px yellow,
+    -4px -10px 10px yellow,
+    0 -10px 30px yellow;
+  animation: 2s Blazing infinite alternate linear;
+}
+
+@keyframes Blazing {
+  0%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 0 yellow,
+    0 0 5px yellow,
+    -2px -5px 5px yellow,
+    4px -10px 10px yellow; }
+  25%   { text-shadow: 0 3px 20px red, 0 0 30px red,
+    0 0 20px orange,
+    0 0 5px yellow,
+    -2px -5px 5px yellow,
+    3px -10px 10px yellow,
+    -4px -15px 20px yellow; }
+  50%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 -5px 10px orange,
+    -2px -5px 5px yellow,
+    3px -10px 10px yellow,
+    -4px -15px 20px yellow,
+    2px -20px 30px rgba(255,255,0,0.5); }
+  75%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 -5px 10px orange,
+    3px -5px 5px yellow,
+    -4px -10px 10px yellow,
+    2px -20px 30px rgba(255,255,0,0.5),
+    0px -25px 40px rgba(255,255,0,0)}
+  100%   { text-shadow: 0 3px 20px red, 0 0 20px red,
+    0 0 10px orange,
+    0 0 0 yellow,
+    0 0 5px yellow,
+    -2px -5px 5px yellow,
+    4px -10px 10px yellow; }
+}
+
+@media screen and (max-width: 992px) {
+  #melting-container {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  #melting-container div {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    width: 100%;
+  }
+  
+  #melting-container div p {
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    display: block;
+    font-size: larger;
+    font-weight: 600;
+  }
+  .animation-melting-title {
+    font-size: 3rem;
+    width: 50%;
+    justify-self: center;
+    text-align: center;
+  }
+  .light {
+    font-family: Monoton;
+    font-size: 3rem;
+    position: relative;
+    border: none;
+    transition: 0.4s ease-in;
+    z-index: 1;
+  }
+  .cube {
+    font-family: Cube;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: normal;
+  }
+  .cubestitle {
+    padding: 25px;
+    color: plum;
+    opacity: 1;
+    z-index: 10;
+    font-size: 1rem;
+  }
+  .cubes-container-description p {
+    font-size: .6rem;
+  }
+  .animation-routes-top {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .animation-routes-bottom {
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    gap: 0px;
+    margin-top: 50px;
+  }
+}

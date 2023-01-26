@@ -1,0 +1,37 @@
+.analog-introduction {
+  width: auto;
+  height: max-content;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.analog-introduction div {
+  border-bottom: white solid 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+
+.analog-description {
+  font-size: 1.2rem;
+  width: 90%;
+  text-align: center;
+}
+
+.cmyk-letterc-booklet {
+  color: cyan;
+}
+.cmyk-letterm-booklet {
+  color: magenta;
+}
+.cmyk-lettery-booklet {
+  color: yellow;
+}
+.cmyk-letterk-booklet {
+  color: white;
+}

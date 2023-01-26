@@ -1,0 +1,212 @@
+#hello {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hello-container {
+  display: block;
+  text-align: center;
+  border-bottom: solid 1px white;
+  width: 80%;
+}
+.hello-container h1 {
+  font-weight: 400;
+}
+.hello-container h1 span {
+  font-style: italic;
+  font-weight: 900;
+}
+
+.hello-container .sayHi {
+  font-size: 6.5rem;
+  font-family: AflaSlabOne;
+  margin-bottom: 80px;
+}
+
+.description-container {
+  white-space: normal;
+  text-align: center;
+  width: 80%;
+  height: auto;
+  font-size: 4rem;
+  line-height: normal;
+}
+
+#hello video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.image-wrapper {
+  position: absolute;
+  width: 60%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-bottom: white 1px solid;
+}
+.image-wrapper img {
+  object-fit: cover;
+  width: 40%;
+}
+
+.aboutMe {
+  width: 100vw;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  justify-items: center;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image .card {
+  display: inline-block;
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../assets/me222.jpg");
+  min-width: 50vmin;
+  min-height: 70vmin;
+  transition: 500ms ease-out;
+}
+.image .card:hover {
+  background-image: url("../assets/me222otherversion.jpg");
+  transform: translateX(20%) rotate(4deg);
+  -webkit-box-shadow: 13px -12px 20px 21px rgba(255, 0, 242, 0.65);
+  box-shadow: 13px -12px 20px 21px rgba(255, 0, 242, 0.65);
+  transition: 500ms ease-in;
+}
+
+.text {
+  display: flex;
+  font-size: 2rem;
+  white-space: normal;
+  line-height: normal;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+#skill-route {
+  width: 100%;
+  height: 100%;
+  justify-self: center;
+}
+#skill-route:hover {
+  color: var(--red);
+}
+
+.skills-route-btn {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  height: max-content;
+  border: white solid 1px;
+  border-radius: 20px;
+}
+
+.skills-route-btn p {
+  margin-right: 20px;
+  font-size: 1rem;
+}
+
+#name {
+  color: var(--red);
+}
+
+@media screen and (max-width: 992px) {
+  .hello-container {
+    font-size: 0.5rem;
+  }
+  .hello-container .sayHi {
+    font-size: 3.5rem;
+    font-family: AflaSlabOne;
+    margin-bottom: 60px;
+  }
+  .image-wrapper {
+    position: absolute;
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom: white 1px solid;
+  }
+  .image-wrapper img {
+    object-fit: cover;
+    width: 70%;
+  }
+  .description-container {
+    white-space: normal;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    font-size: 2rem;
+    line-height: normal;
+  }
+
+  .aboutMe {
+    margin-bottom: 50px;
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .image .card {
+    display: inline-block;
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/me222.jpg");
+    min-width: 50vmin;
+    min-height: 70vmin;
+    transition: 500ms ease-out;
+    margin-bottom: 30px;
+  }
+  .image .card:hover {
+    background-image: url("../assets/me222otherversion.jpg");
+    transform: translateX(14%) rotate(3deg);
+    -webkit-box-shadow: 6px -5px 20px 10px rgba(255, 0, 242, 0.65);
+    box-shadow: 6px -5px 20px 10px rgba(255, 0, 242, 0.65);
+    transition: 500ms ease-in;
+    margin-bottom: 60px;
+  }
+
+  .text {
+    display: flex;
+    font-size: 1.2rem;
+    font-weight: bolder;
+    white-space: normal;
+    line-height: normal;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about {
+    height: auto !important;
+  }
+}

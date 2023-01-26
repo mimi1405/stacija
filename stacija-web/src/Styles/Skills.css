@@ -1,0 +1,46 @@
+.entry-skills{
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-display{
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    gap: 75px;
+}
+
+.skill-subtitle{
+    font-size: 2rem;
+    font-family: ALfaSlabOne;
+}
+
+.skill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    .skill-subtitle{
+        font-size: 1.5rem;
+    }
+    .skills-display{
+        align-items: center;
+        justify-content: center;
+        display: grid;
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+        gap: 75px;
+        margin-bottom: 50px;
+    }
+
+}

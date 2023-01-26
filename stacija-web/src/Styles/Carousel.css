@@ -1,0 +1,54 @@
+.carousel{
+    width: auto;
+    height: auto;
+    margin: 50px;
+}
+.carousel-wrapper{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+.carousel-image{
+    width: 95%;
+    height: 95%;
+    align-self: center;
+    justify-self: center;
+}
+
+.slider-arrow{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.slider-arrow:hover{
+    cursor: pointer;
+    color: var(--red);
+}
+
+@media screen and (max-width: 992px) {
+    .carousel-wrapper{
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        align-content: center;
+    }
+    .carousel-image{
+        width: 90%;
+        height: 90%;
+        justify-self: center;
+        align-self: center;
+    }
+    .slider-arrow{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
