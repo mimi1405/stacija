@@ -172,6 +172,13 @@
   margin-right: 50px;
 }
 
+.explenation-img{
+  width: 80%;
+  height: 80%;
+  justify-self: center;
+  object-fit: cover;
+}
+
 @keyframes push{
   0%{
     margin-right: 80px;
