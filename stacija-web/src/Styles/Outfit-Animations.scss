@@ -53,7 +53,7 @@ $LIGHTING_FLAT: 3;
   $value: ();
 
   @for $i from 1 through $depth {
-    $num: $i +px;
+    $num: $i + px;
     $hueadjust: $i;
 
     @if($lighting ==$LIGHTING_FLOOR) {
