@@ -11,10 +11,10 @@ export default function DrawingRouter() {
         <h1 className="twodtitle">Drawings</h1>
         <div className="routes">
           <Link to="/projekte/2d/drawings/paintings">
-            <p className="route-text hover">Drawings</p>
+            <p className="route-text hova">Drawings</p>
           </Link>
           <Link to="/projekte/2d/drawings/sketches">
-            <p className="route-text hover">Sketches</p>
+            <p className="route-text hova">Sketches</p>
           </Link>
         </div>
       </section>

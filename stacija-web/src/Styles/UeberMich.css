@@ -85,6 +85,7 @@
 .image .card:hover {
   background-image: url("../assets/me222otherversion.jpg");
   transform: translateX(20%) rotate(4deg);
+  -webkit-transform: translate(20%) rotate(4deg);
   -webkit-box-shadow: 13px -12px 20px 21px rgba(255, 0, 242, 0.65);
   box-shadow: 13px -12px 20px 21px rgba(255, 0, 242, 0.65);
   transition: 500ms ease-in;
@@ -189,6 +190,7 @@
   .image .card:hover {
     background-image: url("../assets/me222otherversion.jpg");
     transform: translateX(14%) rotate(3deg);
+    -webkit-transform: translate(14%) rotate(3deg);
     -webkit-box-shadow: 6px -5px 20px 10px rgba(255, 0, 242, 0.65);
     box-shadow: 6px -5px 20px 10px rgba(255, 0, 242, 0.65);
     transition: 500ms ease-in;

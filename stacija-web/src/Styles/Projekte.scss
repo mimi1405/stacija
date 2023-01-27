@@ -256,20 +256,60 @@ $primarycolour: #de09d0;
   color: var(--color-quaternary);
 }
 
-.hover:hover{
+.hova:hover{
     font-family: Monoton;
     font-size: 6rem;
 }
 
-.hovertwo:hover{
+.hovatwo:hover{
   font-family: AlfaSlabOne;
   font-size: 6rem;
 }
 
 
 @media screen and (max-width: 992px) {
-  .threedSize{
+  .threedTextAnimation{
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+        9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+      font-family: Monoton;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      color: var(--color-primary);
+      color: transparent;
+      background-color: black;
+      background-clip: text;
+      animation: shadows 3s ease-in alternate, move 3s ease-in alternate-reverse;
+      padding-top: 60px;
+      margin-bottom: 50px;
+  }
+  .threedTextAnimation:hover{
+    text-shadow: 3px 3px 0 var(--color-secondary), 6px 6px 0 var(--color-tertiary),
+        9px 9px var(--color-quaternary), 12px 12px 0 var(--color-quinary);
+      font-family: Monoton;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-align: center;
+      margin: 0;
+      color: var(--color-primary);
+      color: transparent;
+      background-color: black;
+      background-clip: text;
+      animation: shadows 3s ease-in infinite, move 3s ease-in infinite;
+      padding-top: 60px;
+      margin-bottom: 50px;
+  }
+  .hovatwo:hover{
+    font-family: AlfaSlabOne;
+    font-size: 2rem;
+  }
+  .hova:hover{
+    font-family: Monoton;
     font-size: 3rem;
+}
+  .threedSize{
+    font-size: 2rem;
   }
   .twodtitle{
     align-self: center;

@@ -1,0 +1,9 @@
+#getback{
+    text-decoration:underline;
+    font-style: italic;
+    color: var(--light-red);
+}
+
+#failure-section{
+    text-align: center;
+}

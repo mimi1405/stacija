@@ -475,4 +475,18 @@
     gap: 0px;
     margin-top: 50px;
   }
+  .explode {
+    transition: transform 0.5s;
+    font-size: 3rem;
+    font-family: Monoton;
+    margin-right: 0px;
+    transition-property: none;
+    transition-duration: 0s;
+  }
+  
+  .explode:hover {
+    transform: none;
+    position: relative;
+    margin-right: 0px;
+  }
 }

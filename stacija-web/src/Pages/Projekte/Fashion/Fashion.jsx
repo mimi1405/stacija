@@ -10,7 +10,7 @@ export default function Fashion() {
         <h1 className="projects-title text_shadows">Fashion</h1>
         <div className="routes">
           <Link to="/projekte/fashion/jackets">
-            <p className="route-text hovertwo">Jackets</p>
+            <p className="route-text hovatwo">Jackets</p>
           </Link>
         </div>
       </section>

@@ -29,3 +29,13 @@
   color: var(--light-red);
   cursor: pointer;
 }
+
+@media screen and (max-width: 992px) {
+  .render3dtitle {
+    font-family: Monoton;
+    font-size: 2rem;
+    border-bottom: white solid 1px;
+    padding: 25px;
+    line-height: normal;
+  }
+}

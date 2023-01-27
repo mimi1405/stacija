@@ -10,10 +10,10 @@ export default function TwoD() {
         <h1 className="twodtitle">2D</h1>
         <div className="routes">
           <Link to="/projekte/2d/drawings">
-            <p className="route-text hover">Drawings</p>
+            <p className="route-text hova">Drawings</p>
           </Link>
           <Link to="/projekte/2d/graphics">
-            <p className="route-text hover">Graphics</p>
+            <p className="route-text hova">Graphics</p>
           </Link>
         </div>
       </section>

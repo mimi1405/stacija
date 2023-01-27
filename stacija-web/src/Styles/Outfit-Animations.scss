@@ -1,10 +1,27 @@
 @keyframes cursed-change {
-  0% { color: red; }
-  20% { color: darkred; }
-  40% { color: red; }
-  60% { color: darkred; }
-  80% { color: #ac1717; }
-  100% { color:  #ff0000}
+  0% {
+    color: red;
+  }
+
+  20% {
+    color: darkred;
+  }
+
+  40% {
+    color: red;
+  }
+
+  60% {
+    color: darkred;
+  }
+
+  80% {
+    color: #ac1717;
+  }
+
+  100% {
+    color: #ff0000
+  }
 }
 
 $blood: #ff0000;
@@ -36,7 +53,7 @@ $LIGHTING_FLAT: 3;
   $value: ();
 
   @for $i from 1 through $depth {
-    $num: $i + px;
+    $num: $i +px;
     $hueadjust: $i;
 
     @if($lighting ==$LIGHTING_FLOOR) {
@@ -88,7 +105,7 @@ $primarycolour: #623e24;
     $depth: 8,
     $primaryshadowcolour: adjust-color($primarycolour, $lightness: -10%, $saturation: +20%),
     $shadowopacity: .3);
-    color: $secondarycolour;
+  color: $secondarycolour;
 }
 
 .threed-blood {
@@ -104,7 +121,7 @@ $primarycolour: #623e24;
     $depth: 8,
     $primaryshadowcolour: adjust-color($blood, $lightness: -10%, $saturation: +20%),
     $shadowopacity: .3);
-    color: $secondarycolour;
+  color: $secondarycolour;
 }
 
 .route-text-outfit {
@@ -114,12 +131,29 @@ $primarycolour: #623e24;
 }
 
 @keyframes color-change {
-  0% { color: plum; }
-  20% { color: var(--light-red); }
-  40% { color: pink; }
-  60% { color: palevioletred; }
-  80% { color: rgb(247, 79, 185); }
-  100% { color: var(--red); }
+  0% {
+    color: plum;
+  }
+
+  20% {
+    color: var(--light-red);
+  }
+
+  40% {
+    color: pink;
+  }
+
+  60% {
+    color: palevioletred;
+  }
+
+  80% {
+    color: rgb(247, 79, 185);
+  }
+
+  100% {
+    color: var(--red);
+  }
 }
 
 .pink-changing {
@@ -134,13 +168,12 @@ $primarycolour: #623e24;
   }
 }
 
-#entry-outfits{
+#entry-outfits {
   width: auto;
-    height: auto;
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto;
-    align-items: center;
-    justify-content: center;
+  height: auto;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  align-items: center;
+  justify-content: center;
 }
-
