@@ -34,7 +34,6 @@ import PinkHeart from "./Pages/Projekte/3D/Fashion/Outfits/PinkHeart";
 import DrawingRouter from "./Pages/Projekte/2D/Drawings/DrawingRouter";
 import Skills from "./Pages/Skills/Skills";
 import White from "./Pages/Projekte/3D/Fashion/Outfits/White";
-import Failure from "./Pages/Failure";
 
 function App() {
   return (
@@ -110,7 +109,6 @@ function App() {
         <Route path="/shop" element={<Shop />} />
         <Route path="/skills" element={<Skills/>} />
 
-        <Route path="/404" element={<Failure/>} />
       </Routes>
     </div>
   );

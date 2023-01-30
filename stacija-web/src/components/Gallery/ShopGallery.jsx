@@ -3,11 +3,13 @@ import "../../Styles/Shop.css";
 import { AiOutlineClose } from "react-icons/ai";
 import ArtRender from './ArtRender'
 
+
 export default function ShopGallery({ images }) {
   const [selectedImage, setSelectedImage] = useState();
   const [selectedImageTitle, setSelectedImageTitle] = useState("");
   const [modal, setModal] = useState(false);
   const [buy, setBuy] = useState("");
+
 
   function getImg(image, title) {
     setSelectedImage(image);

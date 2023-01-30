@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/UeberMich.css";
 import TypeWriter from "typewriter-effect";
 import VideoBG from "../components/Video/VideoBG";
@@ -11,13 +11,12 @@ import RussianSeat from "../assets/me222.jpg";
 import RussianSeatTwo from "../assets/me222otherversion.jpg";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
-import {MdFindInPage} from 'react-icons/md'
+import { MdFindInPage } from "react-icons/md";
+import Skelet from "../components/SkeletonLoader/Skelet";
 
-/**
- * TODO: Onhover Bild ändern und Instagramlink daraus machen
- * @returns
- */
 export default function UeberMich() {
+  const [isLoading, setIsLoading] = useState(true);
+
   function checkDevice() {
     if (
       /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -77,7 +76,8 @@ export default function UeberMich() {
       <section id="hello">
         <VideoBG source={Dots} />
         <div className="image-wrapper">
-          <img src={Image} />
+          {isLoading && <Skelet seperations={1} />}
+          <img src={Image} onLoad={() => setIsLoading(false)} />
         </div>
       </section>
       <section>
@@ -87,7 +87,8 @@ export default function UeberMich() {
         <div className="aboutMe">
           <div className="image">
             <a href="https://www.instagram.com/stazzzija/">
-              <div className="card" />
+              {isLoading && <Skelet seperations={1} />}
+              <img onLoad={() => setIsLoading(false)} className="card" />
             </a>
           </div>
           <div className="text">
@@ -99,8 +100,8 @@ export default function UeberMich() {
             </p>
             <Link to="/skills" id="skill-route">
               <div className="skills-route-btn">
-               <p>Zu den Skills</p>
-               <MdFindInPage/>
+                <p>Zu den Skills</p>
+                <MdFindInPage />
               </div>
             </Link>
           </div>

@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
 import "../../Styles/Shop.css";
 
-export default function Shop({images}) {
+export default function Shop({ images }) {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (images !== undefined) {
+      setIsLoading(false);
+    }
+  }, []);
+
   return (
-    <div className="image-grid-shop">
+    <>
+      {isLoading && <Skelet seperations={1} />}
+      <div className="image-grid-shop">
         {images.map((image, index) => {
           return (
             <div
@@ -21,5 +31,6 @@ export default function Shop({images}) {
           );
         })}
       </div>
-  )
+    </>
+  );
 }
